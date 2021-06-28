@@ -1,6 +1,30 @@
 <template>
+  <head>
+    <title>Login Page</title>
+    <!--Made with love by Mutiullah Samim -->
+
+    <!--Bootsrap 4 CDN-->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+
+    <!--Fontawesome CDN-->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+      integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+      crossorigin="anonymous"
+    />
+
+    <!--Custom styles-->
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
   <header>
-     <img  src="./assets/user_avatar.png"  id = "user_avatar"/>
+    <img id="user_avar" src="./assets/user_avatar.png" >
+    <!-- <h5 id = "user_avar">Test</h5> -->
   </header>
   <div id="sidebar">
     <header>
@@ -34,6 +58,7 @@
   <div id="content">
     <nav class="navbar navbar-default">
       <div class="container-fluid">
+        <img id="user_avar" src="./assets/user_avatar.png" />        
         <ul class="nav navbar-nav navbar-right">
           <li>
             <a href="#"><i class="zmdi zmdi-notifications text-danger"></i> </a>
@@ -59,7 +84,11 @@ export default {
 </script>
 
 <style>
-
+/* @import url("https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"); 
+@import url("https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js");
+@import url("https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js");
+@import url("https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"); */
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500");
 header {
   background-color: lightgrey;
   margin-top: -20px;
@@ -68,7 +97,7 @@ header {
   height: 70px;
 }
 
-#user_avatar{
+#user_avar {
   margin-left: 95%;
   height: 70px;
   padding-top: 30px;
