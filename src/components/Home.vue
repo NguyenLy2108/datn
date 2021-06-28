@@ -1,12 +1,6 @@
 <template>
-  <head>
-    <title>Bootstrap Example</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  </head>
   <header>
-    <img id="user_avar" src="../assets/avatar.png" />
+     <img  src="./assets/user_avatar.png"  id = "user_avatar"/>
   </header>
   <div id="sidebar">
     <header>
@@ -14,16 +8,25 @@
     </header>
     <ul class="nav">
       <li>
-        <a href="/">LỚP HỌC </a>
+        <a href="#"> <i class="zmdi zmdi-view-dashboard"></i> Dashboard </a>
       </li>
       <li>
-        <a href="/lichthi">LỊCH THI</a>
+        <a href="#"> <i class="zmdi zmdi-link"></i> Shortcuts </a>
       </li>
       <li>
-        <a href="/thoikhoabieu">THỜI KHÓA BIỂU</a>
+        <a href="#"> <i class="zmdi zmdi-widgets"></i> Overview </a>
       </li>
       <li>
-        <a href="/tintuc">TIN TỨC</a>
+        <a href="#"> <i class="zmdi zmdi-calendar"></i> Events </a>
+      </li>
+      <li>
+        <a href="#"> <i class="zmdi zmdi-info-outline"></i> About </a>
+      </li>
+      <li>
+        <a href="#"> <i class="zmdi zmdi-settings"></i> Services </a>
+      </li>
+      <li>
+        <a href="#"> <i class="zmdi zmdi-comment-more"></i> Contact </a>
       </li>
     </ul>
   </div>
@@ -49,78 +52,27 @@
   </div>
 </template>
 
-<template id = "home">
-  <v-card
-    height="400"
-    width="256"
-    class="mx-auto"
-  >
-    <v-navigation-drawer permanent>
-      <v-list-item>
-        <v-list-item-content>
-          <v-list-item-title class="text-h6">
-            Application
-          </v-list-item-title>
-          <v-list-item-subtitle>
-            subtext
-          </v-list-item-subtitle>
-        </v-list-item-content>
-      </v-list-item>
-
-      <v-divider></v-divider>
-
-      <v-list
-        dense
-        nav
-      >
-        <v-list-item
-          v-for="item in items"
-          :key="item.title"
-          link
-        >
-          <v-list-item-icon>
-            <v-icon>{{ item.icon }}</v-icon>
-          </v-list-item-icon>
-
-          <v-list-item-content>
-            <v-list-item-title>{{ item.title }}</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-      </v-list>
-    </v-navigation-drawer>
-  </v-card>
-</template>
-
 <script>
 export default {
-  name: "Home", 
-    data () {
-      return {
-        items: [
-          { title: 'Dashboard', icon: 'mdi-view-dashboard' },
-          { title: 'Photos', icon: 'mdi-image' },
-          { title: 'About', icon: 'mdi-help-box' },
-        ],
-        right: null,
-      }
-    },
+  name: "Home",
 };
 </script>
 
 <style>
+
 header {
   background-color: lightgrey;
   margin-top: -20px;
   margin-left: -8px;
   margin-right: -8px;
-  height: 60px;
+  height: 70px;
 }
 
-#user_avar {
+#user_avatar{
   margin-left: 95%;
-  height: 40px;
-  padding-top: 15px;
-  padding-bottom: 10px;
+  height: 70px;
+  padding-top: 30px;
+  padding-bottom: 5px;
 }
 
 body {
@@ -128,6 +80,8 @@ body {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
 }
+
+/* Toggle Styles */
 
 #content {
   padding-left: 250px;
@@ -155,6 +109,10 @@ body {
   margin-left: -250px;
   overflow-y: auto;
   background: #37474f;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 #sidebar header {
@@ -169,25 +127,27 @@ body {
   display: block;
   text-decoration: none;
   text-align: center;
-  padding-top: 45px;
+  padding-top: 35px;
 }
 
 #sidebar header a:hover {
   color: #fff;
 }
-#sidebar .nav {
-  padding: 7px;
-}
 
 #sidebar .nav a {
   background: none;
+  border-bottom: 1px solid #455a64;
   color: #cfd8dc;
-  font-size: 16px;
-  padding: 50px 10px;
+  font-size: 14px;
+  padding: 16px 24px;
 }
 
 #sidebar .nav a:hover {
   background: none;
   color: #eceff1;
+}
+
+#sidebar .nav a i {
+  margin-right: 16px;
 }
 </style>
