@@ -34,7 +34,7 @@ export default {
   name: "Lophoc",
   components: { Lop },
   setup() {
-    const dslop = ref(["Lop1", "Lop2", "Lop3", "Lop4", "Lop5"]);
+    const dslop = ref(["Chuyên đề - 7080118 - 01", "Kiểm thử - 7080105 - 03", "Chuyên đề - 7080118 -02", "Chuyên đề - 7080118 - 01", "Kiểm thử - 7080105 - 01"]);
 
     return { dslop };
   },
@@ -71,4 +71,5 @@ export default {
   pointer-events: none;
   color: #aaa;
 }
+
 </style>
